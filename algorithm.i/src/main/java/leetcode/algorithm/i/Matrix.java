@@ -2,12 +2,6 @@ package leetcode.algorithm.i;
 
 public class Matrix {
 
-	public static void main(String[] args) {
-		//PrintUtils.printMatrix(updateMatrix(new int[][] { { 0, 0, 0 }, { 0, 1, 0 }, { 1, 1, 1 }, { 1, 1, 1 } }));
-		//PrintUtils.printMatrix(updateMatrix(new int[][] { { 1, 1, 1 }, { 1, 1, 1 }, { 0, 0, 0 }, { 0, 1, 0 }, { 1, 1, 1 } }));
-		PrintUtils.printMatrix(updateMatrix(new int[][] { { 1, 1, 1 }, { 1, 1, 1 }, { 1, 1, 0 }, { 1, 1, 1 }, { 1, 1, 1 } }));
-	}
-	
 	public static int[][] updateMatrix(int[][] mat) {
         int maxResult = mat.length + mat[0].length - 2;
         for (int i = 0; i < mat.length; i++) {
@@ -16,7 +10,8 @@ public class Matrix {
                 else mat[i][j] = maxResult;
             }
         }
-        PrintUtils.printMatrix(mat);
+        
+        //PrintUtils.printMatrix(mat);
         for (int i = 0; i <  mat.length; i++) {
             for (int j = 0; j < mat[0].length; j++) {
                 if (mat[i][j] == 0) continue;
@@ -24,7 +19,8 @@ public class Matrix {
                 if (j > 0) mat[i][j] = Math.min(mat[i][j - 1] + 1, mat[i][j]); 
             }
         }
-        PrintUtils.printMatrix(mat);
+        
+        //PrintUtils.printMatrix(mat);
         for (int i = mat.length - 1; i >= 0; i--) {        	
             for (int j = mat[0].length - 1; j >= 0; j--) {
             	//System.out.println(i + " " + j);
