@@ -9,8 +9,8 @@ public class RottingOranges {
 		int[][] grid3 = new int[][] { {0,2}};//0
 
 		PrintUtils.printMatrix(grid1); 
-		PrintUtils.printMatrix(grid2);
-		PrintUtils.printMatrix(grid3);
+//		PrintUtils.printMatrix(grid2);
+//		PrintUtils.printMatrix(grid3);
 	}
 	
 	public static int orangesRotting(int[][] grid) {
