@@ -5,3 +5,4 @@
 .settings/
 .metadata/
 target/
+algorithm.i/target/classes/leetcode/algorithm/i/RottingOranges.class
